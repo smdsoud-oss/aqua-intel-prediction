@@ -10,7 +10,7 @@ import About from './components/About';
 import History from './components/History';
 import { getAIAnalysis } from './services/gemini';
 import { Layout } from './components/Layout';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from "framer-motion";
 
 const App: React.FC = () => {
   const [currentScreen, setCurrentScreen] = useState<AppScreen>(AppScreen.HOME);
