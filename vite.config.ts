@@ -7,27 +7,23 @@ export default defineConfig(({ mode }) => {
 
   return {
     server: {
-      port: 3000,
-      host: '0.0.0.0',
-      allowedHosts: ['aqua-intel-prediction-3.onrender.com']
+      host: "0.0.0.0",
+      port: 10000
     },
-
     preview: {
-      host: '0.0.0.0',
-      allowedHosts: ['aqua-intel-prediction-3.onrender.com']
+      host: "0.0.0.0",
+      port: 10000,
+      allowedHosts: ["aqua-intel-prediction-5.onrender.com"]
     },
-
     plugins: [react()],
-
     define: {
       'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
     },
-
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
       }
     }
   }
-})
+});
